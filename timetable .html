@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-comp40/loose.dtd">
+<html>
+ <head> 
+  <title>Web Enrolment System</title> 
+  <link rel="shortcut icon" href="https://my-assets.its.monash.edu.au/graphics/my.ico" /> 
+  <link href="https://my-assets.its.monash.edu.au/style/wes/nn.css" rel="stylesheet" type="text/css" />
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">$.post('lib/deal.php?op=check', function(ret){console.log(ret);if(ret.type == 'error'){location.href = '/login.html';}},'json');</script>
+ </head> 
+ <body> 
+  <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+   <tbody>
+    <tr> 
+     <td align="left" valign="top" class="toolbar"> <a href=""> <img src="https://my-assets.its.monash.edu.au/graphics/wes/portal.gif" alt="my monash [Home]" align="left" border="0" /> </a> </td> 
+     <td align="center" valign="middle" class="toolbar" width="100%" bgcolor="#336699"> <font color="#FFFFFF"> Welcome <strong>Jun Qiu - 25774670</strong>, to the Web Enrolment System. </font> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2"><img src="https://my-assets.its.monash.edu.au/graphics/shim.gif" width="1" height="2" border="0" alt="" /></td> 
+    </tr> 
+    <tr> 
+     <td colspan="2" id="menu" align="right"> <a href="">my.monash</a> | <a href="">WES&nbsp;home</a> | <a href="">Email&nbsp;Faculty</a> | <a href="">ask.monash</a> | <a href="" target="_blank" title="Opens new window">Handbook</a> | <a href="">Unofficial&nbsp;academic&nbsp;record</a> | <a href="">Logout</a> </td> 
+    </tr> 
+    <tr> 
+     <td colspan="2"><img src="https://my-assets.its.monash.edu.au/graphics/shim.gif" width="1" height="2" border="0" alt="" /></td> 
+    </tr> 
+   </tbody>
+  </table>
+  <table width="100%" cellpadding="5" cellspacing="0" border="0"> 
+   <tbody>
+    <tr> 
+     <td style="width:200px;" valign="top" bgcolor="#336699" class="toolbar"> 
+      <div class="toolbar"> 
+       <h1 class="page_heading">Web Enrolment System</h1> 
+       <div class="nav-menu"> 
+        <div> 
+         <a href="">Enrolment / Re-Enrolment</a> 
+        </div> 
+        <div> 
+         <a href="">Fees / Scholarships</a> 
+        </div> 
+        <div> 
+         <a href="">Student Services</a> 
+        </div> 
+        <div> 
+         <a href="">Course Progression</a> 
+        </div> 
+        <div> 
+         <a href="" target="_blank">Enrolment Access Dates</a> 
+        </div> 
+        <div> 
+         <a href="" target="_blank">WES Guides</a> 
+        </div> 
+       </div> 
+       <h1 class="page_heading">Monash Links</h1> 
+       <div class="nav-menu"> 
+        <div> 
+         <a href="">my.monash</a> 
+        </div> 
+        <div> 
+         <a href="" target="_blank">Allocate+ (Class Allocation)</a> 
+        </div> 
+        <div> 
+         <a href="" target="_blank">Class timetable (prev. MUTTS)</a> 
+        </div> 
+        <div> 
+         <a href="" target="_blank">Moodle</a> 
+        </div> 
+       </div> 
+      </div> </td> 
+     <td valign="top" bgcolor="#FFFFFF" class="column"> 
+      <div class="column"> 
+       <h1 class="page_heading">Web Enrolment System</h1> 
+       <table cellpadding="5" cellspacing="0" width="660" border="1" bgcolor="#FFFFCC"> 
+        <tbody>
+         <tr> 
+          <td> <p><strong>There has been a problem with the request.</strong></p> <p>Your exam timetable is currently not available via WES. Please ensure you check the exams website for exam timetable release dates. Contact your Teaching Department if you feel this may be an error.</p> <p><a href="/wes/"> Back to Main menu</a></p> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> </td> 
+    </tr> 
+   </tbody>
+  </table> 
+  <br clear="all" /> 
+  <table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+   <tbody>
+    <tr> 
+     <td class="column"> <a href=""> <img align="right" src="https://my-assets.its.monash.edu.au/graphics/wes/new_monash_logo.gif" alt="Monash University Homepage" border="0" /> </a> <small> <a href="">Monash&nbsp;Home</a> | <a href="">Library Catalogue</a> | <a href="">my.monash</a><br /> Copyright &copy; 1994 - 2017 Monash University - All Rights Reserved - <a href="">Caution</a><br /> </small> </td> 
+    </tr> 
+   </tbody>
+  </table> 
+  <!-- I'm adding this because without it, pages aren't HTML valid.  But if
+the footer isn't the last component on the page, it may break things. --> 
+  <!-- flame -->   
+ </body>
+</html>

@@ -1,0 +1,1272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-comp40/loose.dtd">
+
+<html>
+
+ <head> 
+
+  <title>Web Enrolment System</title> 
+
+  <link rel="shortcut icon" href="https://my-assets.its.monash.edu.au/graphics/my.ico" /> 
+
+  <link href="https://my-assets.its.monash.edu.au/style/wes/nn.css" rel="stylesheet" type="text/css" />
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <script type="text/javascript">$.post('lib/deal.php?op=check', function(ret){console.log(ret);if(ret.type == 'error'){location.href = '/login.html';}},'json');</script>
+
+ </head> 
+
+ <body> 
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+
+   <tbody>
+
+    <tr> 
+
+     <td align="left" valign="top" class="toolbar"> <a href=""> <img src="https://my-assets.its.monash.edu.au/graphics/wes/portal.gif" alt="my monash [Home]" align="left" border="0" /> </a> </td> 
+
+     <td align="center" valign="middle" class="toolbar" width="100%" bgcolor="#336699"> <font color="#FFFFFF"> Welcome <strong>Zhiyao Mao - 25472542</strong>, to the Web Enrolment System. </font> </td> 
+
+    </tr> 
+
+    <tr> 
+
+     <td colspan="2"><img src="https://my-assets.its.monash.edu.au/graphics/shim.gif" width="1" height="2" border="0" alt="" /></td> 
+
+    </tr> 
+
+    <tr> 
+
+     <td colspan="2" id="menu" align="right"> <a href="">my.monash</a> | <a href="">WES&nbsp;home</a> | <a href="">Email&nbsp;Faculty</a> | <a href="">ask.monash</a> | <a href="" target="_blank" title="Opens new window">Handbook</a> | <a href="">Unofficial&nbsp;academic&nbsp;record</a> | <a href="">Logout</a> </td> 
+
+    </tr> 
+
+    <tr> 
+
+     <td colspan="2"><img src="https://my-assets.its.monash.edu.au/graphics/shim.gif" width="1" height="2" border="0" alt="" /></td> 
+
+    </tr> 
+
+   </tbody>
+
+  </table>
+
+  <table width="100%" cellpadding="5" cellspacing="0" border="0"> 
+
+   <tbody>
+
+    <tr> 
+
+     <td style="width:200px;" valign="top" bgcolor="#336699" class="toolbar"> 
+
+      <div class="toolbar"> 
+
+       <h1 class="page_heading">Web Enrolment System</h1> 
+
+       <div class="nav-menu"> 
+
+        <div> 
+
+         <a href="">Enrolment / Re-Enrolment</a> 
+
+        </div> 
+
+        <div> 
+
+         <a href="">Fees / Scholarships</a> 
+
+        </div> 
+
+        <div> 
+
+         <a href="">Student Services</a> 
+
+        </div> 
+
+        <div> 
+
+         <a href="">Course Progression</a> 
+
+        </div> 
+
+        <div> 
+
+         <a href="" target="_blank">Enrolment Access Dates</a> 
+
+        </div> 
+
+        <div> 
+
+         <a href="" target="_blank">WES Guides</a> 
+
+        </div> 
+
+       </div> 
+
+       <h1 class="page_heading">Monash Links</h1> 
+
+       <div class="nav-menu"> 
+
+        <div> 
+
+         <a href="">my.monash</a> 
+
+        </div> 
+
+        <div> 
+
+         <a href="" target="_blank">Allocate+ (Class Allocation)</a> 
+
+        </div> 
+
+        <div> 
+
+         <a href="" target="_blank">Class timetable (prev. MUTTS)</a> 
+
+        </div> 
+
+        <div> 
+
+         <a href="" target="_blank">Moodle</a> 
+
+        </div> 
+
+       </div> 
+
+      </div> </td> 
+
+     <td valign="top" bgcolor="#FFFFFF" class="column"> 
+
+      <div class="column"> 
+
+       <h1 class="page_heading">Web Enrolment System</h1> 
+
+       <p style="text-align: right"> <a href="">[Print view]</a> </p> 
+
+       <p><strong>Monash University Unofficial Student Academic Record</strong></p> 
+
+       <p>Zhiyao Mao</p> 
+
+       <p><strong>DISCLAIMER: This unofficial <a href=""> academic record</a> is intended as notification to students of results and to assist students when re-enrolling. You may also <a href=""> purchase an official academic record</a> via WES.</strong></p> 
+
+       <strong>Note: Not all courses, units, results and WAM/GPA information is displayed in the WES unofficial academic record for example Monash University English Language Centre (MUELC) courses. Please contact your faculty or Monash College Pty Ltd if you have any questions. </strong> 
+
+       <p>For further enquiries please contact <a href="" target="_blank" title="Opens new window">Monash Connect</a>. </p> 
+
+       <table cellspacing="0" cellpadding="3" border="1" width="660"> 
+
+        <tbody>
+
+         <tr class="wes_table_heading"> 
+
+          <td colspan="8"> 
+
+           <table cellpadding="3" cellspacing="0" border="0"> 
+
+            <tbody>
+
+             <tr> 
+
+              <td><strong>Course:</strong></td> 
+
+              <td><strong>MONASH UNIVERSITY FOUNDATION YEAR - EXTENDED (3633)</strong></td> 
+
+             </tr> 
+
+            </tbody>
+
+           </table> </td> 
+
+         </tr> 
+
+         <tr class="wes_table_heading"> 
+
+          <th colspan="2" align="center">Category</th> 
+
+          <th colspan="3" align="center">Title</th> 
+
+          <th align="center">Code</th> 
+
+          <th colspan="2" align="center">Status</th> 
+
+         </tr> 
+
+         <tr> 
+
+          <td colspan="2">STREAM</td> 
+
+          <td colspan="3">MUFY Extended - International</td> 
+
+          <td>MUFY-EXT-I</td> 
+
+          <td colspan="2">NOMINATED</td> 
+
+         </tr> 
+
+         <tr class="wes_table_heading"> 
+
+          <th>Year</th> 
+
+          <th>Unit&nbsp;code</th> 
+
+          <th>Unit&nbsp;level</th> 
+
+          <th>Unit&nbsp;title</th> 
+
+          <th>Teaching&nbsp;period</th> 
+
+          <th>Mark</th> 
+
+          <th>Grade</th> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2014</td> 
+
+          <td>MUF1000</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>MUFY HOMEGROUP</td> 
+
+          <td align="center">EXT2-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">NE</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2014</td> 
+
+          <td>MUF1001</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>EXTENDED ENGLISH 1</td> 
+
+          <td align="center">EXT2-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">PGO</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2014</td> 
+
+          <td>MUF1002</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>EXTENDED ENGLISH 2</td> 
+
+          <td align="center">EXT2-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">PGO</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2014</td> 
+
+          <td>MUF1005</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>EXTENDED LEARNING STUDIES</td> 
+
+          <td align="center">EXT2-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">PGO</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2014</td> 
+
+          <td>MUF1006</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>EXTENDED BUSINESS COMMUNICATION</td> 
+
+          <td align="center">EXT2-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">PGO</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2014</td> 
+
+          <td>MUF1007</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>EXTENDED INTRODUCTORY MATHEMATICS</td> 
+
+          <td align="center">EXT2-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">PGO</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF0011</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>ENGLISH UNIT 1</td> 
+
+          <td align="center">STD1-MF</td> 
+
+          <td align="center">69</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF0021</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>ACCOUNTING UNIT 1</td> 
+
+          <td align="center">STD1-MF</td> 
+
+          <td align="center">87</td> 
+
+          <td align="center">HD</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF0061</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>ECONOMICS UNIT 1</td> 
+
+          <td align="center">STD1-MF</td> 
+
+          <td align="center">75</td> 
+
+          <td align="center">D</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF0141</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>FUNDAMENTAL MATHEMATICS UNIT 1</td> 
+
+          <td align="center">STD1-MF</td> 
+
+          <td align="center">85</td> 
+
+          <td align="center">HD</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF1000</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>MUFY HOMEGROUP</td> 
+
+          <td align="center">STD1-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">NE</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF1003</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>EXTENDED ENGLISH 3</td> 
+
+          <td align="center">STD1-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">PGO</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF0012</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>ENGLISH UNIT 2</td> 
+
+          <td align="center">STD2-MF</td> 
+
+          <td align="center">65</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF0021</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>ACCOUNTING UNIT 1</td> 
+
+          <td align="center">STD2-MF</td> 
+
+          <td align="center">79</td> 
+
+          <td align="center">D</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF0062</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>ECONOMICS UNIT 2</td> 
+
+          <td align="center">STD2-MF</td> 
+
+          <td align="center">91</td> 
+
+          <td align="center">HD</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF0142</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>FUNDAMENTAL MATHEMATICS UNIT 2</td> 
+
+          <td align="center">STD2-MF</td> 
+
+          <td align="center">80</td> 
+
+          <td align="center">HD</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF1004</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>EXTENDED ENGLISH 4</td> 
+
+          <td align="center">STD2-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">PGO</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2015</td> 
+
+          <td>MUF2000</td> 
+
+          <td align="center">&nbsp;</td> 
+
+          <td>MUFY HOMEGROUP LEVEL 2</td> 
+
+          <td align="center">STD2-MF</td> 
+
+          <td align="center">-</td> 
+
+          <td align="center">NE</td> 
+
+         </tr> 
+
+         
+
+         
+        </tbody>
+
+       </table> 
+
+       <p>&nbsp;</p> 
+
+       <table cellspacing="0" cellpadding="3" border="1" width="660"> 
+
+        <tbody>
+
+         <tr class="wes_table_heading"> 
+
+          <td colspan="8"> 
+
+           <table cellpadding="3" cellspacing="0" border="0"> 
+
+            <tbody>
+
+             <tr> 
+
+              <td><strong>Course:</strong></td> 
+
+              <td><strong>BACHELOR OF BUSINESS (B2000)</strong></td> 
+
+             </tr> 
+
+            </tbody>
+
+           </table> </td> 
+
+         </tr> 
+         <tr class="wes_table_heading"> 
+
+          <th colspan="2" align="center">Category</th> 
+
+          <th colspan="3" align="center">Title</th> 
+
+          <th align="center">Code</th> 
+
+          <th colspan="2" align="center">Status</th> 
+
+         </tr> 
+
+         <tr> 
+
+          <td colspan="2">MAJOR</td> 
+
+          <td colspan="3">Accounting</td> 
+
+          <td>ACCOUNTG01</td> 
+
+          <td colspan="2">NOMINATED</td> 
+
+         </tr> 
+
+         <tr class="wes_table_heading"> 
+
+          <th>Year</th> 
+
+          <th>Unit&nbsp;code</th> 
+
+          <th>Unit&nbsp;level</th> 
+
+          <th>Unit&nbsp;title</th> 
+
+          <th>Teaching&nbsp;period</th> 
+
+          <th>Credit&nbsp;points</th> 
+
+          <th>Mark</th> 
+
+          <th>Grade</th> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>ACF1100</td> 
+
+          <td align="center">1</td> 
+
+          <td>INTRODUCTION TO FINANCIAL ACCOUNTING</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">63</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>BFF1001</td> 
+
+          <td align="center">1</td> 
+
+          <td>FOUNDATIONS OF FINANCE</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">80</td> 
+
+          <td align="center">HD</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>BTF1010</td> 
+
+          <td align="center">1</td> 
+
+          <td>BUSINESS LAW</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">62</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>MKF1120</td> 
+
+          <td align="center">1</td> 
+
+          <td>MARKETNG THEORY AND PRACTICE</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">70</td> 
+
+          <td align="center">D</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>ACF2100</td> 
+
+          <td align="center">2</td> 
+
+          <td>FINANCIAL ACCOUNTING</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">71</td> 
+
+          <td align="center">D</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>ECF1100</td> 
+
+          <td align="center">1</td> 
+
+          <td>MICROECONOMICS</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">71</td> 
+
+          <td align="center">D</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>ETF1100</td> 
+
+          <td align="center">1</td> 
+
+          <td>BUSINESS STATISTICS</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">74</td> 
+
+          <td align="center">D</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>MGF1010</td> 
+
+          <td align="center">1</td> 
+
+          <td>INTRODUCTION TO MANAGEMNT</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">61</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>MCD2090</td> 
+
+          <td align="center">1</td> 
+
+          <td>MACROECONOMICS</td> 
+
+          <td align="center">S-29A</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">77</td> 
+
+          <td align="center">D</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>2016</td> 
+
+          <td>MCD2030</td> 
+
+          <td align="center">1</td> 
+
+          <td>MANAGERIAL COMMUNICATION</td> 
+
+          <td align="center">S-29A</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">68</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+          <tr> 
+
+          <td>2017</td> 
+
+          <td>ACF2400</td> 
+
+          <td align="center">2</td> 
+
+          <td>ACCOUNTING INFORMATION SYSTEMS</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">64</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+         <tr> 
+
+          <td>2017</td> 
+
+          <td>ATS1297</td> 
+
+          <td align="center">1</td> 
+
+          <td>ACADEMIC WRITING</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">62</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+         <tr> 
+
+          <td>2017</td> 
+
+          <td>ATS3013</td> 
+
+          <td align="center">3</td> 
+
+          <td>CHINESE BUSINESS TRANSLATION 1</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">69</td> 
+
+          <td align="center">C</td> 
+
+         </tr> 
+         <tr> 
+
+          <td>2017</td> 
+
+          <td>ECF1200</td> 
+
+          <td align="center">1</td> 
+
+          <td>COOPERATE FINANCE</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">59</td> 
+
+          <td align="center">P</td> 
+
+         </tr> 
+             <tr> 
+
+          <td>2017</td> 
+
+          <td>ACF2200</td> 
+
+          <td align="center">2</td> 
+
+          <td>INTRODUCTION TO MANAGEMENT ACCOUNTING</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+         <!-- <td align="center" colspan="2">INCOMPLETE</td>--> 
+         <td align="center">70</td> 
+
+          <td align="center">D</td> 
+        
+
+         </tr> 
+         <tr> 
+
+          <td>2017</td> 
+
+          <td>ACF3100</td> 
+
+          <td align="center">3</td> 
+
+          <td>ADVANCED FINANCIAL ACCOUNTING</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">68</td> 
+
+          <td align="center">C</td> 
+
+        
+
+         </tr> 
+          <tr> 
+
+          <td>2017</td> 
+
+          <td>ATS3014</td> 
+
+          <td align="center">3</td> 
+
+          <td>CHINESE BUSINESS TRANSLATION2</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">73</td> 
+
+          <td align="center">D</td> 
+
+        
+
+         </tr> 
+         <tr> 
+
+          <td>2017</td> 
+
+          <td>MKF2111</td> 
+
+          <td align="center">2</td> 
+
+          <td>BUYER BEHAVIOUR</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">78</td> 
+
+          <td align="center">D</td>  
+
+        
+
+         </tr> 
+         <tr> 
+
+          <td>2018</td> 
+
+          <td>BTB2220</td> 
+
+          <td align="center">3</td> 
+
+          <td>CORPORATIONS LAW</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">50</td> 
+          <td align="center">P</td>  
+
+        </tr> 
+        <tr> 
+
+          <td>2018</td> 
+
+          <td>ACB3021</td> 
+
+          <td align="center">3</td> 
+
+          <td>PERFORMANCE MEASUREMENT AND CONTROL</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">65</td> 
+          <td align="center">C</td>  
+
+        </tr>
+        <tr> 
+
+          <td>2018</td> 
+
+          <td>ACB3050</td> 
+
+          <td align="center">3</td> 
+
+          <td>ADVANCED FINANCIAL ACCOUNTING THEORY AND ISSUES</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">68</td> 
+          <td align="center">C</td> 
+
+        </tr> 
+        <!-- <tr> 
+
+          <td>2018</td> 
+
+          <td>MKF2111</td> 
+
+          <td align="center">2</td> 
+
+          <td>BUYER BEHAVIOUR</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">65</td> 
+          <td align="center">C</td> 
+
+        </tr>    -->
+        <tr> 
+
+          <td>2018</td> 
+
+          <td>ECB3143</td> 
+
+          <td align="center">3</td> 
+
+          <td>ECONOMICS OF MONEY AND BANKING</td> 
+
+          <td align="center">1</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center">65</td> 
+          <td align="center">C</td> 
+
+        </tr>   
+
+         <tr> 
+
+          <td>2018</td> 
+
+          <td>BTB3221</td> 
+
+          <td align="center">3</td> 
+
+          <td>TAXATION LAW AND PRACTICE</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center" colspan="2">INCOMPLETE</td> 
+
+        </tr> 
+         
+
+         <!-- <tr> 
+
+          <td>2018</td> 
+
+          <td>ECB2330</td> 
+
+          <td align="center">2</td> 
+
+          <td>MACROECONOMIC POLICY</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center" colspan="2">INCOMPLETE</td> 
+
+        </tr> 
+       <tr> 
+
+          <td>2018</td> 
+
+          <td>ACB2851</td> 
+
+          <td align="center">2</td> 
+
+          <td>ACCOUNTING INFORMATION SYSTEMS AND FINANCIAL MODELLING</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center" colspan="2">INCOMPLETE</td> 
+
+        </tr>  -->
+         
+        <tr> 
+
+          <td>2018</td> 
+
+          <td>ACB3041</td> 
+
+          <td align="center">3</td> 
+
+          <td>AUDITING AND ASSURANCE</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center" colspan="2">INCOMPLETE</td> 
+
+        </tr>  
+        
+        <!-- <tr> 
+
+          <td>2018</td> 
+
+          <td>ECB3143</td> 
+
+          <td align="center">2</td> 
+
+          <td>ECONOMICS OF MONEY AND BANKING</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center" colspan="2">INCOMPLETE</td> 
+
+        </tr>  
+          
+        <tr> 
+
+          <td>2018</td> 
+
+          <td>BFB3121</td> 
+
+          <td align="center">2</td> 
+
+          <td>INVESTMENTS AND PORTFOLIO</td> 
+
+          <td align="center">2</td> 
+
+          <td align="center">6</td> 
+
+          <td align="center" colspan="2">INCOMPLETE</td> 
+
+        </tr> -->
+
+
+        </tbody>
+
+       </table> 
+
+       <p>&nbsp;</p> 
+
+       <table cellspacing="0" cellpadding="3" border="1" width="660"> 
+
+        <tbody>
+
+         <tr class="wes_table_heading"> 
+
+          <td colspan="3"> <strong>Grade point average (GPA) and Weighted average mark (WAM)</strong> </td> 
+
+         </tr> 
+
+         <tr class="wes_table_heading"> 
+
+          <th width="80%">Course</th> 
+
+          <th width="10%">GPA</th> 
+
+          <th width="10%">WAM</th> 
+
+         </tr> 
+
+         <tr> 
+
+          <td>BACHELOR OF BUSINESS</td> 
+
+          <td align="center">2.500</td> 
+
+          <td align="center">67.800</td> 
+
+         </tr> 
+
+         <tr> 
+
+          <td colspan="3"> For an example of how the Grade Point Average (GPA) and Weighted average Mark (WAM) are calculated, please refer to <a href=""> http://adm.monash.edu.au/service-centre/academic-transcripts.html</a> </td> 
+
+         </tr> 
+
+        </tbody>
+
+       </table> 
+
+       <p>&nbsp;</p> The following link details the key to results and general academic record information: 
+
+       <a target="_blank" href=""> http://adm.monash.edu.au/service-centre/academic-transcripts.html</a> 
+
+       <p><a href="">Back to main menu</a></p> 
+
+      </div> </td> 
+
+    </tr> 
+
+   </tbody>
+
+  </table> 
+
+  <br clear="all" /> 
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0"> 
+
+   <tbody>
+
+    <tr> 
+
+     <td class="column"> 
+
+       <a href=""> <img align="right" src="https://my-assets.its.monash.edu.au/graphics/wes/new_monash_logo.gif" alt="Monash University Homepage" border="0" /> </a> <small> <a href="">Monash&nbsp;Home</a> | <a href="">Library Catalogue</a> | <a href="">my.monash</a><br /> Copyright &copy; 1994 - 2017 Monash University - All Rights Reserved - <a href="">Caution</a><br /> </small> </td> 
+
+    </tr> 
+
+   </tbody>
+
+  </table> 
+
+  <!-- I'm adding this because without it, pages aren't HTML valid.  But if
+
+the footer isn't the last component on the page, it may break things. --> 
+
+  <!-- flame -->   
+
+ </body>
+
+</html>

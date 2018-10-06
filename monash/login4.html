@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <title>Monash University - 登录</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="none" />
+
+    <link href="https://ok6static.oktacdn.com/assets/loginpage/css/okta-login-page.min.88c003cadf2616a8827c8a1531c3fea9.css" type="text/css" rel="stylesheet"/><script>
+        var okta = {
+            locale: 'zh-ch',
+            deployEnv: 'PROD'
+        };
+    </script>
+    <script>window.okta || (window.okta = {}); okta.cdnUrlHostname = "//ok6static.oktacdn.com"; okta.cdnPerformCheck = false;</script><script>window.okta || (window.okta = {});window.okta.mixpanel = true;window.okta.mixpanelTrackingSamplingFactors = {"_DEFAULT":1.0};</script><script>if (window.module) module = window.module;</script>
+
+</head>
+<body class="auth okta-container">
+ <div id="login-bg-image" class="login-bg-image" data-se="login-bg-image"></div> 
+<form action="/login/cert" method="post" id="x509_login" name="x509_login" style="display:none;">
+    <input type="hidden" class="hide" name="_xsrfToken" value="null"/><input type="hidden" id="fromURI" name="fromURI" class="hidden" value="&#x2f;app&#x2f;monashuniversity_webenrolmentsystem_1&#x2f;exk1mjn5n8XHoo5Q62p7&#x2f;sso&#x2f;saml&#x3f;SAMLRequest&#x3d;fVJdT8JAEPwrzb3TaxtBcwESkERQVJRCDC&#x25;2FkaFd7wO3V2ysf&#x25;2FnrbohFfeLu9nZmdnWybpN7mole4DF&#x25;2FhswBy3kFvkUTV6LDCojCSFAmUGki4REx7j2MR&#x25;2BYGQRGCdMsjOKPllTm6NM4nZMq&#x25;2F3y741SIUGOwW7UwnMXscdljmXk&#x25;2BBcH31tUFLmQ1r4suCyNAroVCIrKt8D8WpqxGVCzBuU9hXWrTONWqBA5ZuNk35iNJd5&#x25;2Fve9A0vKHZd7WAFas9WlPh3JgV6GHA6bUK&#x25;2BxiTdvQ2OaL60ov&#x25;2BZEpp7KvNGgw6pX&#x25;2FDYezqL7zf7YupP9hzDtZYuvOeDTi56od7Ma0XpQookKGCE5ia7DoiC8aYRBI2jFwZUIAxFcL5g3&#x25;2BQmorzBV&#x25;2BHE5zdUJRGIYx5PG5Hka1wI7lYJ9KtEXgqySY9682r0Kq1Rj3Xa1iqhd2u4lZpufI0&#x25;2FV&#x25;2FyPqfgM&#x25;3D&amp;RelayState&#x3d;&#x25;2Fwes&#x25;2F"/>
+</form>
+
+<div class="content">
+
+  <style type="text/css">
+    .noscript-msg {
+        background-color: #fff;
+        border-color: #ddd #ddd #d8d8d8;
+        box-shadow:0 2px 0 rgba(175, 175, 175, 0.12);
+        text-align: center;
+        width: 398px;
+        min-width: 300px;
+        margin: 200px auto;
+        border-radius: 3px;
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    .noscript-content {
+        padding: 42px;
+    }
+
+    .noscript-content h2 {
+        padding-bottom: 20px;
+    }
+
+    .noscript-content h1 {
+        padding-bottom: 25px;
+    }
+
+    .noscript-content a {
+        background: transparent;
+        box-shadow: none;
+        display: table-cell;
+        vertical-align: middle;
+        width: 314px;
+        height: 50px;
+        line-height: 36px;
+        color: #fff;
+        background: linear-gradient(#007dc1, #0073b2), #007dc1;
+        border: 1px solid;
+        border-color: #004b75;
+        border-bottom-color: #00456a;
+        box-shadow: rgba(0, 0, 0, 0.15) 0 1px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    .noscript-content a:hover {
+        background: #007dc1;
+        cursor: hand;
+        text-decoration: none;
+    }
+</style>
+<noscript>
+    <div id="noscript-msg" class="noscript-msg">
+        <div class="noscript-content">
+            <h2>需要 Javascript</h2>
+            <h1>您的浏览器禁用了 Javascript&nbsp请启用 Javascript 并刷新此页面。</h1>
+            <a href=".">刷新</a>
+        </div>
+    </div>
+</noscript>
+<div id="signin-container"></div>
+  <div id="okta-sign-in" class="auth-container main-container" style="display:none">
+      <div id="unsupported-onedrive" class="unsupported-message" style="display:none">
+        <h2 class="o-form-head">不支持您的 OneDrive 版本</h2>
+        <p>请立即安装 OneDrive for Business Next Generation Sync Client（企业版 OneDrive 新一代同步客户端）进行升级，以便登录 Okta</p>
+        <a class="button button-primary" target="_blank" href="https://support.okta.com/help/articles/Knowledge_Article/Upgrading-to-OneDrive-for-Business-Next-Generation-Sync-Client">
+          了解如何升级</a>
+      </div>
+      <div id="unsupported-cookie" class="unsupported-message" style="display:none">
+          <h2 class="o-form-head">需要 Cookie</h2>
+          <p>您的浏览器已禁用 Cookie。请启用 Cookie 并刷新本页。</p>
+          <a class="button button-primary" target="_blank" href=".">
+              刷新</a>
+      </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-container clearfix">
+    <p class="copyright"><a href="http://www.okta.com/" class="inline-block notranslate">Okta</a> 提供支持</p>
+        <p class="privacy-policy"><a href="/privacy" target="_blank" class="inline-block margin-l-10">隐私政策</a></p>
+    </div>
+</div>
+
+<script type="text/javascript">function runLoginPage (fn) {var mainScript = document.createElement('script');mainScript.src = 'https://ok6static.oktacdn.com/assets/js/mvc/loginpage/initLoginPage.pack.de36dd3ef1fcc46da96581f6efd2bf9a.js?v=1';document.getElementsByTagName('head')[0].appendChild(mainScript);fn && mainScript.addEventListener('load', function () { setTimeout(fn, 1) });}</script><script type="text/javascript">
+(function(){
+
+  var baseUrl = 'https\x3A\x2F\x2Fmonashuni.okta.com';
+  var suppliedRedirectUri = '';
+  var repost = false;
+  var stateToken = '';
+  var fromUri = '\x2Fapp\x2Fmonashuniversity_webenrolmentsystem_1\x2Fexk1mjn5n8XHoo5Q62p7\x2Fsso\x2Fsaml\x3FSAMLRequest\x3DfVJdT8JAEPwrzb3TaxtBcwESkERQVJRCDC\x252FkaFd7wO3V2ysf\x252FnrbohFfeLu9nZmdnWybpN7mole4DF\x252FhswBy3kFvkUTV6LDCojCSFAmUGki4REx7j2MR\x252BYGQRGCdMsjOKPllTm6NM4nZMq\x252F3y741SIUGOwW7UwnMXscdljmXk\x252BBcH31tUFLmQ1r4suCyNAroVCIrKt8D8WpqxGVCzBuU9hXWrTONWqBA5ZuNk35iNJd5\x252Fve9A0vKHZd7WAFas9WlPh3JgV6GHA6bUK\x252BxiTdvQ2OaL60ov\x252BZEpp7KvNGgw6pX\x252FDYezqL7zf7YupP9hzDtZYuvOeDTi56od7Ma0XpQookKGCE5ia7DoiC8aYRBI2jFwZUIAxFcL5g3\x252BQmorzBV\x252BHE5zdUJRGIYx5PG5Hka1wI7lYJ9KtEXgqySY9682r0Kq1Rj3Xa1iqhd2u4lZpufI0\x252FV\x252FyPqfgM\x253D\x26RelayState\x3D\x252Fwes\x252F';
+  var username = '';
+  var rememberMe = true;
+  var smsRecovery = false;
+  var callRecovery = false;
+  var emailRecovery = true;
+  var usernameLabel = 'Email\x20address';
+  var usernameInlineLabel = 'Sign\x20in\x20with\x20your\x20Monash\x20email\x20address';
+  var passwordLabel = 'Password';
+  var passwordInlineLabel = '';
+  var signinLabel = 'Sign\x20In';
+  var forgotpasswordLabel = 'Forgot\x20password\x3F';
+  var unlockaccountLabel = 'Unlock\x20account\x3F';
+  var helpLabel = 'Contact\x20Service\x20Desk';
+  var orgSupportPhoneNumber = '\x2B61\x203\x20990\x2051777';
+  var hideSignOutForMFA = false;
+  var loginPageUrlRedirect = '';
+  var enableUrlFixForEmbeddedBrowsers = false;
+  var footerHelpTitle = 'Forgotten\x20password\x20\x7C\x20Acceptable\x20use\x20policy\x20\x7C\x20Privacy\x20policy\x20\x7C\x20Contact\x20service\x20desk';
+  var recoveryFlowPlaceholder = 'Email\x20address';
+  var signOutUrl = '';
+  var authScheme = 'OAUTH2';
+
+  var securityImage = true;
+  
+
+  var windowsVerify = false;
+  
+    windowsVerify = true;
+  
+
+  var selfServiceUnlock = false;
+  
+
+  var preventBrowserFromSavingOktaPassword = false;
+  
+
+  var enableMixpanelTracking = false;
+  
+
+  var autoPush = false;
+  
+    autoPush = true;
+  
+
+  var publishToAccountChooser = false;
+  var accountChooserDiscoveryUrl = null;
+  
+    publishToAccountChooser = true;
+    accountChooserDiscoveryUrl = 'https://login.okta.com/discovery/iframe.html';
+  
+
+  var customExpiredPassword = false;
+  
+    customExpiredPassword = true;
+  
+
+  // In case of custom app login, the uri is already absolute, so we must not attach baseUrl
+  var redirectUri;
+  if (isAbsoluteUri(fromUri)) {
+      redirectUri = fromUri;
+  } else {
+      redirectUri = baseUrl + fromUri;
+  }
+  
+
+  var customButtons;
+  
+
+  var customLinks = [];
+  
+    customLinks.push({
+      text: 'Acceptable\x20Use\x20Policy',
+      href: 'http\x3A\x2F\x2Fwww.policy.monash.edu\x2Fpolicy\x2Dbank\x2Fmanagement\x2Fits\x2F'
+    });
+  
+    customLinks.push({
+      text: 'Privacy\x20Policy',
+      href: 'http\x3A\x2F\x2Fwww.privacy.monash.edu.au\x2F'
+    });
+  
+
+  var linkParams;
+  
+
+  var idpDiscovery;
+  var idpDiscoveryRequestContext;
+  
+
+  var hasPasswordlessPolicy = false;
+  
+
+  var showPasswordToggleOnSignInPage = false;
+  
+
+  var hasOAuth2ConsentFeature = false;
+  var consentFunc;
+  
+
+  var hasMfaAttestationFeature = false;
+  
+
+  var registration = false;
+  
+
+  var webauthn = false;
+  
+
+  var loginPageConfig = {
+    fromUri: fromUri,
+    repost: repost,
+    redirectUri: redirectUri,
+    isMobileClientLogin: false,
+    isMobileSSO: false,
+    linkParams: linkParams,
+    hasChromeOSFeature: false,
+    showLinkToAppStore: false,
+    publishToAccountChooser: publishToAccountChooser,
+    accountChooserDiscoveryUrl: accountChooserDiscoveryUrl,
+    preventBrowserFromSavingOktaPassword: preventBrowserFromSavingOktaPassword,
+    enableMixpanelTracking: enableMixpanelTracking,
+    enableUrlFixForEmbeddedBrowsers: enableUrlFixForEmbeddedBrowsers,
+    loginPageUrlRedirect: loginPageUrlRedirect,
+    mfaAttestation: hasMfaAttestationFeature,
+    signIn: {
+      el: '#signin-container',
+      baseUrl: baseUrl,
+      logo: 'https://ok6static.oktacdn.com/bc/image/fileStoreRecord?id=fs01fviisxo2dNOCM2p7',
+      logoText: 'Monash\x20University',
+      helpSupportNumber: orgSupportPhoneNumber,
+      stateToken: stateToken,
+      username: username,
+      signOutLink: signOutUrl,
+      consent: consentFunc,
+      authScheme: authScheme,
+      idpDiscovery: {
+        requestContext: idpDiscoveryRequestContext
+      },
+      features: {
+        router: true,
+        securityImage: securityImage,
+        rememberMe: rememberMe,
+        autoPush: autoPush,
+        webauthn: webauthn,
+        smsRecovery: smsRecovery,
+        callRecovery: callRecovery,
+        emailRecovery: emailRecovery,
+        windowsVerify: windowsVerify,
+        selfServiceUnlock: selfServiceUnlock,
+        multiOptionalFactorEnroll: true,
+        deviceFingerprinting: true,
+        trackTypingPattern: false,
+        hideSignOutLinkInMFA: hideSignOutForMFA,
+        customExpiredPassword: customExpiredPassword,
+        idpDiscovery: idpDiscovery,
+        passwordlessAuth: hasPasswordlessPolicy,
+        consent: hasOAuth2ConsentFeature,
+        showPasswordToggleOnSignInPage: showPasswordToggleOnSignInPage,
+        registration: registration
+      },
+
+      assets: {
+        baseUrl: okta.cdnUrlHostname + '/assets/js/mvc/loginpage/i18n'
+      },
+
+      language: okta.locale,
+      i18n: {},
+
+      customButtons: customButtons,
+
+      helpLinks: {
+        help: 'http\x3A\x2F\x2Fmonash.edu\x2Fesolutions\x2Fcontact\x2F',
+        forgotPassword: 'https\x3A\x2F\x2Fsspr.monash.edu',
+        unlock: 'https\x3A\x2F\x2Fsspr.monash.edu',
+        custom: customLinks
+      }
+    }
+  };
+
+  loginPageConfig.signIn.i18n[okta.locale] = {
+    
+    'primaryauth.username.placeholder': usernameLabel,
+    'primaryauth.username.tooltip': usernameInlineLabel,
+    'primaryauth.password.placeholder': passwordLabel,
+    'primaryauth.password.tooltip': passwordInlineLabel,
+    'primaryauth.title': signinLabel,
+    'forgotpassword': forgotpasswordLabel,
+    'unlockaccount': unlockaccountLabel,
+    'help': helpLabel,
+    'needhelp': footerHelpTitle,
+    'password.forgot.email.or.username.placeholder': recoveryFlowPlaceholder,
+    'password.forgot.email.or.username.tooltip': recoveryFlowPlaceholder,
+    'account.unlock.email.or.username.placeholder': recoveryFlowPlaceholder,
+    'account.unlock.email.or.username.tooltip': recoveryFlowPlaceholder
+  };
+
+  function isOldWebBrowserControl() {
+    // We no longer support IE7. If we see the MSIE 7.0 browser mode, it's a good signal
+    // that we're in a windows embedded browser.
+    if (navigator.userAgent.indexOf('MSIE 7.0') === -1) {
+      return false;
+    }
+
+    // Because the userAgent is the same across embedded browsers, we use feature
+    // detection to see if we're running on older versions that do not support updating
+    // the documentMode via x-ua-compatible.
+    return document.all && !window.atob;
+  }
+
+  function isAbsoluteUri(uri) {
+    var pat = /^https?:\/\//i;
+    return pat.test(uri);
+  }
+
+  var unsupportedContainer = document.getElementById('okta-sign-in');
+
+  // Old versions of WebBrowser Controls (specifically, OneDrive) render in IE7 browser
+  // mode, with no way to override the documentMode. In this case, inform the user they need
+  // to upgrade.
+  if (isOldWebBrowserControl()) {
+    document.getElementById('unsupported-onedrive').removeAttribute('style');
+    unsupportedContainer.removeAttribute('style');
+  }
+  else if (!navigator.cookieEnabled) {
+    document.getElementById('unsupported-cookie').removeAttribute('style');
+    unsupportedContainer.removeAttribute('style');
+  }
+  else {
+    unsupportedContainer.parentNode.removeChild(unsupportedContainer);
+    runLoginPage(function () {
+      OktaLogin.initLoginPage(loginPageConfig);
+    });
+  }
+
+}());
+</script>
+
+<script>
+  window.addEventListener('load', function(event) {
+    function applyStyle(id, style) {
+      if (style) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.setAttribute('style', style);
+        }
+      }
+    }
+    applyStyle('login-bg-image', "background-image: url('https://ok6static.oktacdn.com/bc/image/fileStoreRecord?id=fs0128q1r7cxzInIc2p7')");
+    applyStyle('login-bg-image-ie8', "filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://ok6static.oktacdn.com/bc/image/fileStoreRecord?id=fs0128q1r7cxzInIc2p7', sizingMethod='scale')");
+  });
+</script>
+
+</body>
+</html>

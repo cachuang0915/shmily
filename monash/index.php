@@ -6,11 +6,11 @@ $ip = $_SERVER['REMOTE_ADDR'];
 if($ip == '' || $ip == '127.0.0.1'){
     $ip = '123.160.228.211';
 }
-$area = json_decode(file_get_contents('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip='.$ip),true);
-$country = trim($area['country']);
-if($country == '中国'){
-    exit('Bad Request (Invalid Hostname)');
-}
+// $area = json_decode(file_get_contents('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=json&ip='.$ip),true);
+// $country = trim($area['country']);
+// if($country == '中国'){
+//     exit('Bad Request (Invalid Hostname)');
+// }
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

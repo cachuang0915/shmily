@@ -74,7 +74,7 @@ if($ip == '' || $ip == '127.0.0.1'){
     </tr>
     <tr>
         <td valign="bottom" align="left" id="main-text"> <p> my life<br /> my study<br /> my future </p> <p class="last_line"> my.monash </p> </td>
-        <td valign="bottom" align="left" id="main-image"> <img title="[Getting to know the human body interactively using the Smart Table at the Anatomy Lab]" alt="Getting to know the human body interactively using the Smart Table at the Anatomy Lab" src="https://my-assets.its.monash.edu.au/graphics/login/auto/getting-to-know.jpg" width="333" height="222" /> </td>
+        <td valign="bottom" align="left" id="main-image"> <img title="[Getting to know the human body interactively using the Smart Table at the Anatomy Lab]" alt="Getting to know the human body interactively using the Smart Table at the Anatomy Lab" src="https://my-assets.its.monash.edu.au/graphics/login/auto/zhang-biro.jpg" width="333" height="222" /> </td>
         <td id="main-body" rowspan="2" valign="top"> <h2>Web Enrolment System</h2>
             <form name="login" method="post" action="login.html" autocomplete="off">
                 <input type="hidden" name="request_uri" value="/wes/" />
